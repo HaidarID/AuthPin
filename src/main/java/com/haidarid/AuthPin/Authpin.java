@@ -15,16 +15,16 @@ public class AuthPin extends JavaPlugin {
 	@Override
 	public void onEnable() {	
 		try {
-		PinManager.createFile();
-		instance = this;
-		getCommand("pin").setExecutor(new PinCommand());
-		Bukkit.getPluginManager().registerEvents(new ClickEvent(), this);
-		Bukkit.getPluginManager().registerEvents(new GuiUncloseable(), this);
-		Bukkit.getPluginManager().registerEvents(new PlayerJoin(), this);
-		getConfig().options().copyDefaults(false);
-		saveDefaultConfig();
-		Utils.loadPin();
-		Utils.fixConfig();
+			PinManager.createFile();
+			instance = this;
+			getCommand("pin").setExecutor(new PinCommand());
+			Bukkit.getPluginManager().registerEvents(new ClickEvent(), this);
+			Bukkit.getPluginManager().registerEvents(new GuiUncloseable(), this);
+			Bukkit.getPluginManager().registerEvents(new PlayerJoin(), this);
+			getConfig().options().copyDefaults(false);
+			saveDefaultConfig();
+			Utils.loadPin();
+			Utils.fixConfig();
 		}
 		catch (Exception exc) {
 			// TODO: handle exception

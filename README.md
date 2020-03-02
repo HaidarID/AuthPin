@@ -1,2 +1,2 @@
-# AuthPin
-Minecraft login based pin
+# AuthPin (1.14.4+)
+Minecraft spigot plugin, login based pin. 
